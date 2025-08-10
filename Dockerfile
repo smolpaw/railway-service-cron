@@ -28,7 +28,7 @@ RUN chmod +x /usr/local/bin/railway.sh /startup.sh
 
 # Create crontab file for supercronic
 RUN mkdir -p /app && \
-    echo "$START_SCHEDULE /usr/local/bin/railway.sh up" > /app/crontab && \
-    echo "$STOP_SCHEDULE /usr/local/bin/railway.sh down" >> /app/crontab
+    echo "$START_SCHEDULE /usr/local/bin/railway.sh start" > /app/crontab && \
+    echo "$STOP_SCHEDULE /usr/local/bin/railway.sh stop" >> /app/crontab
 
 CMD ["/startup.sh"]

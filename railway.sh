@@ -126,7 +126,7 @@ echo ""
 
 # Execute intent
 case "$1" in
-    "up")
+    "start")
         echo "=== Bringing Services UP ==="
         IFS=',' read -ra SERVICE_ARRAY <<< "$SERVICES_ID"
         for service in "${SERVICE_ARRAY[@]}"; do
@@ -134,7 +134,7 @@ case "$1" in
             deploy_service "$service"
         done
         ;;
-    "down")
+    "stop")
         echo "=== Bringing Services DOWN ==="
         IFS=',' read -ra SERVICE_ARRAY <<< "$SERVICES_ID"
         for service in "${SERVICE_ARRAY[@]}"; do
@@ -144,7 +144,7 @@ case "$1" in
         ;;
     *)
         echo "Error: Invalid argument '$1'"
-        echo "Usage: $0 [up|down]"
+        echo "Usage: $0 [start|stop]"
         exit 1
         ;;
 esac

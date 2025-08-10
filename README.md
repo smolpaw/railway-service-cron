@@ -10,7 +10,7 @@ A Railway template that automatically starts and stops your Railway services on 
 - **📊 Smart Management**: Only starts/stops services when needed (checks current status)
 - **📝 Railway Dashboard Logs**: All output visible in Railway's log viewer
 - **🐳 Alpine-based**: Lightweight Docker container
-- **💾 Low Resource**: Minimal memory footprint - uses only ~20MB RAM
+- **💾 Low Resource**: Minimal memory footprint - uses only ~10MB RAM
 
 ## 📋 Requirements
 
@@ -114,9 +114,9 @@ STOP_SCHEDULE="0 14 * * 6,0"
 ## 🏗️ How It Works
 
 1. **Container starts** and validates configuration
-2. **Cron daemon** runs in the background with your schedules
-3. **Start schedule** runs the script with `up` command
-4. **Stop schedule** runs the script with `down` command
+2. **Supercronic** runs in the background with your schedules
+3. **Start schedule** runs the script with `start` argument
+4. **Stop schedule** runs the script with `stop` argument
 5. **Script checks** current service status before taking action
 6. **All output** is logged to Railway dashboard for monitoring
 
