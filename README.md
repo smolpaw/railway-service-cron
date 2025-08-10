@@ -20,7 +20,7 @@ A Railway template that automatically starts and stops your Railway services on 
 
 ## 🎯 Quick Deploy
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/your-template-id)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/railway-service-cron?referralCode=hbN2rY)
 
 ### Required Configuration
 
