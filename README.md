@@ -9,6 +9,7 @@ A Railway template that automatically starts and stops your Railway services on 
 - **🔧 Flexible Scheduling**: Custom cron expressions or use sensible defaults
 - **📊 Smart Management**: Only starts/stops services when needed (checks current status)
 - **📝 Railway Dashboard Logs**: All output visible in Railway's log viewer
+- **🐳 Alpine-based**: Lightweight Docker container
 - **💾 Low Resource**: Minimal memory footprint - uses only ~20MB RAM
 
 ## 📋 Requirements

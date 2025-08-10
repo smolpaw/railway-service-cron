@@ -1,12 +1,11 @@
-FROM debian:slim
+FROM alpine:3
 
 # Install required packages for the script
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
     bash \
     curl \
     jq \
-    tzdata \
-    && rm -rf /var/lib/apt/lists/*
+    tzdata
 
 # Install supercronic
 ENV SUPERCRONIC_URL=https://github.com/aptible/supercronic/releases/download/v0.2.34/supercronic-linux-amd64 \
