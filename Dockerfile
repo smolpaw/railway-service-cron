@@ -6,20 +6,15 @@ RUN apk add --no-cache \
     curl \
     jq \
     dcron \
-    tzdata \
-    supervisor
+    tzdata
 
 # Set build arguments with defaults for scheduling
 ARG START_SCHEDULE="0 8 * * *"
 ARG STOP_SCHEDULE="0 18 * * *"
 
-# Create supervisor configuration directory
-RUN mkdir -p /etc/supervisor/conf.d
-
-# Copy scripts and configuration
+# Copy scripts
 COPY railway.sh /usr/local/bin/railway.sh
 COPY startup.sh /startup.sh
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN chmod +x /usr/local/bin/railway.sh /startup.sh
 
 # Create crontab for root user

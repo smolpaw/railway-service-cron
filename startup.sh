@@ -2,9 +2,10 @@
 
 echo "🚀 Railway Service Cron Starting..."
 echo "📍 Timezone: $TZ"
-echo "⏰ Start Schedule: $START_SCHEDULE"  
-echo "🛑 Stop Schedule: $STOP_SCHEDULE"
+echo "⏰ Cron Schedule:"
+cat /var/spool/cron/crontabs/root
 echo "🔧 Services: $SERVICES_ID"
-echo "📋 Starting cron supervisor..."
+echo "📋 Starting cron daemon..."
 
-exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
+# Start cron in foreground mode
+exec /usr/sbin/crond -f -l 2
