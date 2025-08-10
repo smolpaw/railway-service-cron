@@ -3,9 +3,9 @@
 echo "🚀 Railway Service Cron Starting..."
 echo "📍 Timezone: $TZ"
 echo "⏰ Cron Schedule:"
-cat /var/spool/cron/crontabs/root
+cat /app/crontab
 echo "🔧 Services: $SERVICES_ID"
-echo "📋 Starting cron daemon..."
+echo "📋 Starting supercronic..."
 
-# Start cron in foreground mode
-exec /usr/sbin/crond -f -l 2
+# Start supercronic with crontab file
+exec /usr/local/bin/supercronic /app/crontab

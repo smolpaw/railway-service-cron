@@ -9,8 +9,7 @@ A Railway template that automatically starts and stops your Railway services on 
 - **🔧 Flexible Scheduling**: Custom cron expressions or use sensible defaults
 - **📊 Smart Management**: Only starts/stops services when needed (checks current status)
 - **📝 Railway Dashboard Logs**: All output visible in Railway's log viewer
-- **🐳 Alpine-based**: Lightweight Docker container
-- **💾 Low Resource**: Minimal memory footprint - uses only ~5MB RAM
+- **💾 Low Resource**: Minimal memory footprint - uses only ~20MB RAM
 
 ## 📋 Requirements
 
@@ -66,9 +65,9 @@ STOP_SCHEDULE="0 14 * * 6,0"
 ## 🔑 Getting Your Railway Token
 
 1. Go to [Railway Dashboard → Account Settings → Tokens](https://railway.app/account/tokens)
-2. Click **"Create Token"**
-3. Choose **"Personal Account Token"** (not Team or Project token)
-4. Give it a name (e.g., "Service Cron Manager")
+2. Give it a name (e.g., "Service Cron Manager")
+3. Select the Team
+4. Click **"Create"**
 5. Copy the generated token (random string of characters)
 
 ## 🆔 Getting Service IDs
